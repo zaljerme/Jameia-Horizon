@@ -1,0 +1,63 @@
+/* about.css */
+
+/* Apply general styles to HTML elements on the about.html page */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    opacity: 0.8;
+    background-image:  radial-gradient(#007bff 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75px, #ffffff 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0,15px 15px;
+    color: #333333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Centering the container */
+    padding: 20px;
+    background-color: #ffffff; /* Container background color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+    border-radius: 10px; /* Adding border radius for rounded corners */
+}
+
+h1 {
+    color: #006aff; /* Heading color */
+    text-align: center;
+    margin-bottom: 20px; /* Adding some space below the heading */
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px; /* Adding some space below paragraphs */
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px; /* Adding space below the image */
+}
+
+.image-container img {
+    max-width: 10%; /* Ensure the image does not exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.back-button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background-color: #006aff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Adding a smooth transition */
+}
+
+.back-button:hover {
+    background-color: #0050a2; /* Darker shade on hover */
+}

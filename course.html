@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="course.css">
+    <title>Jameia Horizon Courses</title>
+</head>
+
+<body>
+    <button class="back-button" onclick="window.history.back()"> Back</button> <!-- Back button -->
+    <header>
+        <div class="info">
+            <h1>Our Courses</h1>
+            <p>Learn With Coach And Mentor!</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="separator">
+            <h2>Popular Courses</h2>
+        </div>
+        <div class="courses">
+            <div class="item" id="web-development">
+                <div class="top">
+                    <img src="assests/Course-1.jpg" alt="Web Development Course">
+                    <div class="info">
+                        <a href="regestration.html" onclick="toggleDescription('web-development')">Web Development Course</a>
+                    </div>
+                </div>
+                <div class="course-description" id="web-development-desc">
+                    <h3>Web Development Course Description</h3>
+                    <p>In this Web Development course, we will cover:</p>
+                    <ul>
+                        <li>Introduction to HTML: Structuring web pages with tags and elements</li>
+                        <li>CSS for styling: Layouts, colors, and fonts</li>
+                        <li>Responsive design using media queries</li>
+                        <li>Introduction to JavaScript: Basic programming and interactivity</li>
+                        <li>Building your first website: From planning to deployment</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="item" id="chemistry">
+                <div class="top">
+                    <img src="assests/chemistry.jpg" alt="Chemistry Course">
+                    <div class="info">
+                        <a href="regestration.html" onclick="toggleDescription('chemistry')">Chemistry Course</a>
+                    </div>
+                </div>
+                <div class="course-description" id="chemistry-desc">
+                    <h3>Chemistry Course Description</h3>
+                    <p>In this Chemistry course, we will cover:</p>
+                    <ul>
+                        <li>Atomic structure and the periodic table</li>
+                        <li>Chemical bonds: Ionic, covalent, and metallic bonding</li>
+                        <li>Balancing chemical equations and reaction types</li>
+                        <li>States of matter and gas laws</li>
+                        <li>Acids, bases, and pH</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="item" id="computer-science">
+                <div class="top">
+                    <img src="assests/computer-science.jpg" alt="Computer Science Course">
+                    <div class="info">
+                        <a href="regestration.html" onclick="toggleDescription('computer-science')">Computer Science Course</a>
+                    </div>
+                </div>
+                <div class="course-description" id="computer-science-desc">
+                    <h3>Computer Science Course Description</h3>
+                    <p>In this Computer Science course, we will cover:</p>
+                    <ul>
+                        <li>Introduction to algorithms and flowcharts</li>
+                        <li>Basic programming concepts: Variables, loops, and conditionals</li>
+                        <li>Data structures: Arrays, stacks, and queues</li>
+                        <li>Object-oriented programming principles</li>
+                        <li>Debugging and code optimization techniques</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="item" id="physics">
+                <div class="top">
+                    <img src="assests/physics.jpg" alt="Physics Course">
+                    <div class="info">
+                        <a href="regestration.html" onclick="toggleDescription('physics')">Physics Course</a>
+                    </div>
+                </div>
+                <div class="course-description" id="physics-desc">
+                    <h3>Physics Course Description</h3>
+                    <p>In this Physics course, we will cover:</p>
+                    <ul>
+                        <li>Newton's laws of motion and kinematics</li>
+                        <li>Work, energy, and power</li>
+                        <li>Waves and sound: Properties and behavior</li>
+                        <li>Electricity and magnetism fundamentals</li>
+                        <li>Thermodynamics: Heat, temperature, and energy transfer</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="item" id="english">
+                <div class="top">
+                    <img src="assests/english.jpg" alt="English Course">
+                    <div class="info">
+                        <a href="regestration.html" onclick="toggleDescription('english')">English Course</a>
+                    </div>
+                </div>
+                <div class="course-description" id="english-desc">
+                    <h3>English Course Description</h3>
+                    <p>In this English course, we will cover:</p>
+                    <ul>
+                        <li>Grammar fundamentals: Tenses, punctuation, and sentence structure</li>
+                        <li>Essay writing: Structure, argumentation, and style</li>
+                        <li>Reading comprehension and analysis of literary texts</li>
+                        <li>Creative writing: Building narratives and character development</li>
+                        <li>Public speaking and presentation skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+            <!-- Add more courses following the same pattern -->
+        </div>
+    </div>
+
+ 
+
+    <script>
+        function toggleDescription(courseId) {
+            var description = document.getElementById(courseId + '-desc');
+            if (description.classList.contains('show')) {
+                description.classList.remove('show');
+            } else {
+                description.classList.add('show');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

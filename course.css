@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #f8f8fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #007bff;
+    color: #fff;
+}
+
+header .info h1 {
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+header .info p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.content {
+    padding: 50px 80px;
+}
+
+.separator {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.separator h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.courses .item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.courses .item:hover {
+    transform: translateY(-10px);
+}
+
+.courses .item .top {
+    position: relative;
+}
+
+.courses .item .top img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.courses .item .info {
+    padding: 20px;
+}
+
+.courses .item .info a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.courses .item .info a:hover {
+    color: #0056b3;
+}
+
+.courses .item .info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.courses .item .bottom {
+    padding: 15px 20px;
+    background-color: #f1f1f1;
+    border-top: 1px dashed #ccc;
+}
+
+.courses .item .bottom h5.tag {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff2b2;
+    color: #db7c26;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 40px 40px 0 0;
+}
+
+footer .columns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer .columns .col {
+    flex: 1;
+    padding: 0 20px;
+}
+
+footer .columns .col h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer .columns .col p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .columns .col .social-links i {
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .columns .col .social-links i:hover {
+    color: #ddd;
+}
+
+footer .copyright {
+    font-size: 14px;
+}
+.back-button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background-color: #006aff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Adding a smooth transition */
+}
+
+.back-button:hover {
+    background-color: #0050a2; /* Darker shade on hover */
+}

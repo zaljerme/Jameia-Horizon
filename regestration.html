@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="regestration.css">
+    <title>Jameia Horizon Courses</title>
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back()"> Back</button> <!-- Back button -->
+    <div class="container">
+        <h1>Welcome to regestration</h1>
+
+
+        <!-- Course descriptions go here -->
+
+        <div class="registration-form">
+            <h2>Class Registration</h2>
+            <form id="registration-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Course Selection</label>
+                <select id="course" name="course" required>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Physics">Physics</option>
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAhvGpOITIuYHthA81RPBpv2WQCYQGuzgg",
+            authDomain: "jameia-horizon.firebaseapp.com",
+            projectId: "jameia-horizon",
+            storageBucket: "jameia-horizon.appspot.com",
+            messagingSenderId: "161265068174",
+            appId: "1:161265068174:web:054a15d72a0bed8f98c1df",
+            measurementId: "G-2CP6RZKZ5M"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+
+        // Get form element
+        const form = document.getElementById('registration-form');
+
+        // Listen for form submit
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const course = document.getElementById('course').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                // Save to Firestore
+                await db.collection('registrations').add({
+                    name: name,
+                    email: email,
+                    course: course,
+                    message: message
+                });
+                alert('Registration successful!');
+                form.reset();
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>
